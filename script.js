@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
   setupStatisticsCounters();
   setupAppPreviewTabs();
   setupFaqAccordion();
+  setupDarkMode();
+  setupTiltEffect();
 });
 
 
@@ -267,6 +269,80 @@ function setupFaqAccordion() {
         content.setAttribute('aria-hidden', 'false');
         
         content.style.maxHeight = content.scrollHeight + 'px';
+      }
+    });
+  });
+}
+
+/**
+ * 8. Dark Mode Toggle
+ */
+function setupDarkMode() {
+  const themeToggle = document.getElementById('theme-toggle');
+  const sunIcon = themeToggle?.querySelector('.sun-icon');
+  const moonIcon = themeToggle?.querySelector('.moon-icon');
+  
+  if (!themeToggle) return;
+
+  // Check saved theme or system preference
+  const savedTheme = localStorage.getItem('bloom_theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  
+  if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    if (sunIcon) sunIcon.style.display = 'none';
+    if (moonIcon) moonIcon.style.display = 'block';
+  }
+
+  themeToggle.addEventListener('click', () => {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    
+    if (isDark) {
+      document.documentElement.removeAttribute('data-theme');
+      localStorage.setItem('bloom_theme', 'light');
+      if (sunIcon) sunIcon.style.display = 'block';
+      if (moonIcon) moonIcon.style.display = 'none';
+    } else {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      localStorage.setItem('bloom_theme', 'dark');
+      if (sunIcon) sunIcon.style.display = 'none';
+      if (moonIcon) moonIcon.style.display = 'block';
+    }
+  });
+}
+
+/**
+ * 9. 3D Tilt Hover Effect for Pricing and Feature Cards
+ */
+function setupTiltEffect() {
+  const tiltElements = document.querySelectorAll('.pricing-card, .feature-card, .plant-card');
+  
+  tiltElements.forEach(element => {
+    element.classList.add('tilt-effect');
+    
+    element.addEventListener('mousemove', (e) => {
+      // Only apply on desktop
+      if (window.innerWidth < 768) return;
+      
+      const rect = element.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      
+      const rotateX = ((y - centerY) / centerY) * -5; // Max 5 deg
+      const rotateY = ((x - centerX) / centerX) * 5;  // Max 5 deg
+      
+      element.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+    });
+    
+    element.addEventListener('mouseleave', () => {
+      // Use standard scale for premium card if applicable
+      if (element.classList.contains('premium') && window.innerWidth >= 768) {
+        element.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1.05, 1.05, 1.05)';
+      } else {
+        element.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
       }
     });
   });
