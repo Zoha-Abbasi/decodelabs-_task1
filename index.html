@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bloom — Smart Plant Care Companion</title>
+  <meta name="description" content="Bloom makes plant care effortless with smart watering reminders, growth tracking, personalized schedules, and expert guidance. Keep your indoor garden thriving.">
+  
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
+  
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  
+  <header class="navbar" id="navbar">
+    <div class="container navbar-container">
+      <a href="#hero" class="logo" aria-label="Bloom Homepage">
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22C12 22 20 18 20 12C20 9.8 19 8.5 17.5 7.5C15 6 12 2 12 2C12 2 9 6 6.5 7.5C5 8.5 4 9.8 4 12C4 18 12 22 12 22Z"></path>
+          <path d="M12 2V22" stroke-opacity="0.3"></path>
+          <path d="M12 12C12 12 15 10 17 11" stroke-linecap="round"></path>
+          <path d="M12 15C12 15 9 13 7 14" stroke-linecap="round"></path>
+        </svg>
+        <span class="logo-text">Bloom</span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#features" class="nav-link">Features</a></li>
+          <li class="nav-item"><a href="#how-it-works" class="nav-link">How It Works</a></li>
+          <li class="nav-item"><a href="#app-preview" class="nav-link">App Preview</a></li>
+          <li class="nav-item"><a href="#gallery" class="nav-link">Plant Library</a></li>
+          <li class="nav-item"><a href="#testimonials" class="nav-link">Reviews</a></li>
+          <li class="nav-item"><a href="#faq" class="nav-link">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#download" class="btn btn-secondary nav-btn-desktop">Download</a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  
+  <main>
+
+    
+    <section class="hero" id="hero">
+      <div class="container hero-container">
+        
+        <div class="blob-bg blob-1"></div>
+        <div class="blob-bg blob-2"></div>
+        
+        <div class="hero-content scroll-reveal">
+          <div class="tagline">
+            <span class="tag-icon">🌱</span>
+            <span>Your Plants' New Best Friend</span>
+          </div>
+          <h1 class="hero-title">
+            Helping Your Plants Thrive, <span class="gradient-text">One Reminder</span> at a Time.
+          </h1>
+          <p class="hero-subtitle">
+            Bloom makes plant care effortless with smart watering reminders, growth tracking, personalized care schedules, and expert guidance.
+          </p>
+          <div class="hero-actions">
+            <a href="#download" class="btn btn-primary">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              Download App
+            </a>
+            <a href="#features" class="btn btn-tertiary">
+              Learn More
+              <svg class="btn-icon-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+          
+          <div class="hero-trust">
+            <div class="avatar-group">
+              <div class="avatar">👨‍🌾</div>
+              <div class="avatar">👩‍🌾</div>
+              <div class="avatar">👩‍💻</div>
+              <div class="avatar">👨‍⚕️</div>
+            </div>
+            <div class="trust-text">
+              <strong>150k+ Happy Growers</strong> trusting Bloom worldwide.
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual scroll-reveal delay-200">
+          <div class="mockup-container">
+            
+            <div class="floating-badge badge-watering">
+              <div class="badge-icon">💧</div>
+              <div class="badge-info">
+                <span class="badge-title">Water Monstera</span>
+                <span class="badge-desc">Today at 2:00 PM</span>
+              </div>
+            </div>
+            
+            <div class="floating-badge badge-fertilizer">
+              <div class="badge-icon">🌿</div>
+              <div class="badge-info">
+                <span class="badge-title">Fertilizer alert</span>
+                <span class="badge-desc">In 3 days</span>
+              </div>
+            </div>
+
+            
+            <div class="phone-frame">
+              <div class="phone-notch"></div>
+              <div class="phone-screen">
+                
+                <div class="screen-status-bar">
+                  <span class="time">9:41</span>
+                  <div class="status-icons">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19.4c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.9-1.9C9.07 19.57 10.49 20 12 20c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 15c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/></svg>
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17 5H7a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3zm1 11a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v8z"/></svg>
+                  </div>
+                </div>
+
+                
+                <div class="app-header">
+                  <div class="app-user">
+                    <div class="user-avatar">🟢</div>
+                    <div>
+                      <h4 class="app-greeting">Good morning,</h4>
+                      <h3 class="app-username">Green Lover</h3>
+                    </div>
+                  </div>
+                  <button class="app-notification-btn" aria-label="Notifications">🔔</button>
+                </div>
+
+                
+                <div class="app-search">
+                  <span class="search-icon">🔍</span>
+                  <span class="search-placeholder">Search plant database...</span>
+                </div>
+
+                
+                <div class="app-card-primary">
+                  <div class="card-top">
+                    <div>
+                      <span class="card-tag">Today's Task</span>
+                      <h3 class="card-plant-name">Monstera Deliciosa</h3>
+                    </div>
+                    <span class="card-status status-danger">Dry Soil</span>
+                  </div>
+                  <div class="card-action-bar">
+                    <span class="action-text">Needs 300ml Water</span>
+                    <button class="btn-app-action">Done</button>
+                  </div>
+                </div>
+
+                
+                <div class="app-section-title">
+                  <span>My Plant Collection (4)</span>
+                  <span class="app-link-more">See all</span>
+                </div>
+
+                <div class="app-plants-grid">
+                  <div class="app-plant-item">
+                    <div class="app-plant-img-placeholder plant-monstera">🌿</div>
+                    <h4 class="app-plant-title">Monstera</h4>
+                    <span class="app-plant-status">Water: 2d</span>
+                  </div>
+                  <div class="app-plant-item">
+                    <div class="app-plant-img-placeholder plant-snake">🌵</div>
+                    <h4 class="app-plant-title">Snake Plant</h4>
+                    <span class="app-plant-status">Water: 12d</span>
+                  </div>
+                  <div class="app-plant-item">
+                    <div class="app-plant-img-placeholder plant-fig">🌳</div>
+                    <h4 class="app-plant-title">Fiddle Leaf</h4>
+                    <span class="app-plant-status">Water: 4d</span>
+                  </div>
+                  <div class="app-plant-item">
+                    <div class="app-plant-img-placeholder plant-pothos">🍃</div>
+                    <h4 class="app-plant-title">Pothos</h4>
+                    <span class="app-plant-status">Water: 1d</span>
+                  </div>
+                </div>
+
+                
+                <div class="app-nav-bar">
+                  <div class="app-nav-item active">
+                    <span class="app-nav-icon">🏠</span>
+                    <span class="app-nav-label">Home</span>
+                  </div>
+                  <div class="app-nav-item">
+                    <span class="app-nav-icon">📅</span>
+                    <span class="app-nav-label">Schedule</span>
+                  </div>
+                  <div class="app-nav-item center-nav">
+                    <div class="nav-plus">+</div>
+                  </div>
+                  <div class="app-nav-item">
+                    <span class="app-nav-icon">📖</span>
+                    <span class="app-nav-label">Guides</span>
+                  </div>
+                  <div class="app-nav-item">
+                    <span class="app-nav-icon">⚙️</span>
+                    <span class="app-nav-label">Settings</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="stats" id="stats">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item scroll-reveal">
+            <div class="stat-number-wrapper">
+              <span class="stat-number" data-target="98">0</span><span class="stat-suffix">%</span>
+            </div>
+            <p class="stat-label">Plant care accuracy & survival rate</p>
+          </div>
+          <div class="stat-item scroll-reveal delay-100">
+            <div class="stat-number-wrapper">
+              <span class="stat-number" data-target="2.5" data-decimal="true">0.0</span><span class="stat-suffix">M+</span>
+            </div>
+            <p class="stat-label">Smart watering alerts successfully sent</p>
+          </div>
+          <div class="stat-item scroll-reveal delay-200">
+            <div class="stat-number-wrapper">
+              <span class="stat-number" data-target="150">0</span><span class="stat-suffix">K+</span>
+            </div>
+            <p class="stat-label">Healthy plants thriving under our care</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="features" id="features">
+      <div class="container">
+        <div class="section-header scroll-reveal">
+          <span class="section-tag">Powerful Features</span>
+          <h2 class="section-title">Everything you need for a blooming house</h2>
+          <p class="section-subtitle">Designed to simplify plant ownership. We combine smart hardware data modeling with intuitive software features to keep your plants happy.</p>
+        </div>
+
+        <div class="features-grid">
+          
+          <div class="feature-card scroll-reveal">
+            <div class="feature-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title">Smart Watering Schedule</h3>
+            <p class="feature-desc">Never forget to water or accidentally overwater again. Bloom dynamically adjusts reminders based on local temperature, weather, and specific species requirements.</p>
+          </div>
+
+          
+          <div class="feature-card scroll-reveal delay-100">
+            <div class="feature-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                <circle cx="12" cy="13" r="4"></circle>
+              </svg>
+            </div>
+            <h3 class="feature-title">AI Leaf Diagnostic Scan</h3>
+            <p class="feature-desc">Yellow spots? Wilting leaves? Snap a quick photo with the Bloom scanner to identify over 1,200 plant diseases instantly and get structured treatment solutions.</p>
+          </div>
+
+          
+          <div class="feature-card scroll-reveal delay-200">
+            <div class="feature-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+            </div>
+            <h3 class="feature-title">Customizable Calendars</h3>
+            <p class="feature-desc">Consolidate watering, fertilizing, misting, and repotting routines in a unified care feed. Sync it directly with your Google or Apple Calendar easily.</p>
+          </div>
+
+          
+          <div class="feature-card scroll-reveal delay-300">
+            <div class="feature-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 20v-8m0 0V4M12 12H4m8 0h8"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title">Growth Milestones Tracker</h3>
+            <p class="feature-desc">Create beautiful visual growth logs of your plants. Document new leaves, flowers, or repotting phases to generate beautiful, exportable time-lapse stories.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="how-it-works" id="how-it-works">
+      <div class="container">
+        <div class="section-header scroll-reveal">
+          <span class="section-tag">Simple & Intuitive</span>
+          <h2 class="section-title">Three steps to plant heaven</h2>
+          <p class="section-subtitle">Get started in minutes and enjoy the peace of mind that comes with professional-grade plant management tools.</p>
+        </div>
+
+        <div class="steps-grid">
+          
+          <div class="step-card scroll-reveal">
+            <div class="step-number">01</div>
+            <h3 class="step-title">Catalog Your Green Friends</h3>
+            <p class="step-desc">Search our catalog of over 15,000 plants or simply scan to register. Assign location tags to group them by room or garden zone.</p>
+            <div class="step-visual">
+              <div class="plant-search-bar">
+                <span>🔍 Ficus Lyr...</span>
+                <span class="add-tag">+ Add</span>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="step-card scroll-reveal delay-150">
+            <div class="step-number">02</div>
+            <h3 class="step-title">Get AI Personalized Care</h3>
+            <p class="step-desc">Input basic details like pot size, soil mixture, and window exposure. Bloom configures a scientific, dynamic care routine automatically.</p>
+            <div class="step-visual">
+              <div class="care-alert-slider">
+                <div class="slider-fill" style="width: 75%"></div>
+                <span class="slider-label">Light: Bright Indirect</span>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="step-card scroll-reveal delay-300">
+            <div class="step-number">03</div>
+            <h3 class="step-title">Watch Your Plants Thrive</h3>
+            <p class="step-desc">Follow clean push notifications. Watch your plants flourish, log their height over the seasons, and share your beautiful collections.</p>
+            <div class="step-visual">
+              <div class="growth-achievement">
+                <span class="ach-icon">🎉</span>
+                <span class="ach-text">New Leaf Formed!</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="app-preview" id="app-preview">
+      <div class="container">
+        <div class="section-header scroll-reveal">
+          <span class="section-tag">Interface Design</span>
+          <h2 class="section-title">Crafted with precision & care</h2>
+          <p class="section-subtitle">An elegant, modern mobile layout designed to fit right into your aesthetic. Take a look at the screens our users interact with daily.</p>
+        </div>
+
+        <div class="preview-tabs scroll-reveal">
+          <button class="preview-tab active" data-screen="dashboard">Dashboard</button>
+          <button class="preview-tab" data-screen="calendar">Schedule Calendar</button>
+          <button class="preview-tab" data-screen="scanner">Leaf Diagnosis Scanner</button>
+        </div>
+
+        <div class="preview-display scroll-reveal delay-150">
+          <div class="preview-screen-wrapper">
+            
+            <div class="preview-screen active" id="screen-dashboard">
+              <div class="preview-screen-content">
+                <div class="app-screen-mock">
+                  <div class="mock-header">My Garden</div>
+                  <div class="mock-card alert-card">
+                    <div class="mock-card-body">
+                      <h4>Needs Urgent Attention</h4>
+                      <p>2 plants need watering today</p>
+                    </div>
+                    <span class="action-indicator">💧</span>
+                  </div>
+                  <div class="mock-list">
+                    <div class="mock-list-item">
+                      <span>Monstera</span>
+                      <span class="list-badge urgent">Dry</span>
+                    </div>
+                    <div class="mock-list-item">
+                      <span>Calathea</span>
+                      <span class="list-badge urgent">Dry</span>
+                    </div>
+                    <div class="mock-list-item">
+                      <span>Aloe Vera</span>
+                      <span class="list-badge ok">Healthy</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+            <div class="preview-screen" id="screen-calendar">
+              <div class="preview-screen-content">
+                <div class="app-screen-mock">
+                  <div class="mock-header">Care Schedule</div>
+                  <div class="calendar-weeks">
+                    <span class="day">M</span><span class="day active">T</span><span class="day">W</span><span class="day">T</span><span class="day">F</span><span class="day">S</span><span class="day">S</span>
+                  </div>
+                  <div class="mock-timeline">
+                    <div class="timeline-event">
+                      <div class="time-stamp">09:00 AM</div>
+                      <div class="event-details">
+                        <h5>Water Pothos</h5>
+                        <p>Kitchen shelf</p>
+                      </div>
+                    </div>
+                    <div class="timeline-event">
+                      <div class="time-stamp">11:30 AM</div>
+                      <div class="event-details">
+                        <h5>Misting ferns</h5>
+                        <p>Bathroom shelf</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+            <div class="preview-screen" id="screen-scanner">
+              <div class="preview-screen-content">
+                <div class="app-screen-mock mock-camera">
+                  <div class="scanner-overlay">
+                    <div class="scan-target-box">
+                      <div class="scan-corner top-left"></div>
+                      <div class="scan-corner top-right"></div>
+                      <div class="scan-corner bottom-left"></div>
+                      <div class="scan-corner bottom-right"></div>
+                      <div class="scan-line"></div>
+                    </div>
+                  </div>
+                  <div class="scanner-details-card">
+                    <h4>Scanning Leaf...</h4>
+                    <p>Hold camera close to yellowing spots.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="gallery" id="gallery">
+      <div class="container">
+        <div class="section-header scroll-reveal">
+          <span class="section-tag">Plant Directory</span>
+          <h2 class="section-title">Find care guides for your favorites</h2>
+          <p class="section-subtitle">Search, learn, and grow. Browse detailed care profiles for popular houseplants curated by expert botanists.</p>
+        </div>
+
+        <div class="gallery-grid">
+          
+          <div class="plant-card scroll-reveal">
+            <div class="plant-img-wrapper">
+              <img src="images/monstera.jpg" alt="Monstera Deliciosa in a minimal white ceramic pot" class="plant-img" loading="lazy">
+              <span class="plant-difficulty diff-easy">Easy Care</span>
+            </div>
+            <div class="plant-details">
+              <h3 class="plant-name">Monstera Deliciosa</h3>
+              <p class="plant-scientific">Swiss Cheese Plant</p>
+              <div class="plant-needs">
+                <span class="need"><span class="need-icon">☀️</span> Bright Indirect</span>
+                <span class="need"><span class="need-icon">💧</span> 1-2 Weeks</span>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="plant-card scroll-reveal delay-100">
+            <div class="plant-img-wrapper">
+              <img src="images/snake_plant.jpg" alt="Snake Plant in a terracotta pot" class="plant-img" loading="lazy">
+              <span class="plant-difficulty diff-easy">Hard to Kill</span>
+            </div>
+            <div class="plant-details">
+              <h3 class="plant-name">Snake Plant</h3>
+              <p class="plant-scientific">Sansevieria Trifasciata</p>
+              <div class="plant-needs">
+                <span class="need"><span class="need-icon">☀️</span> Low to Bright</span>
+                <span class="need"><span class="need-icon">💧</span> 3-4 Weeks</span>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="plant-card scroll-reveal delay-200">
+            <div class="plant-img-wrapper">
+              <img src="images/fiddle_leaf.jpg" alt="Fiddle Leaf Fig tree in a woven basket" class="plant-img" loading="lazy">
+              <span class="plant-difficulty diff-hard">Expert Care</span>
+            </div>
+            <div class="plant-details">
+              <h3 class="plant-name">Fiddle Leaf Fig</h3>
+              <p class="plant-scientific">Ficus Lyrata</p>
+              <div class="plant-needs">
+                <span class="need"><span class="need-icon">☀️</span> Bright Consistent</span>
+                <span class="need"><span class="need-icon">💧</span> Every 1 Week</span>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="plant-card scroll-reveal delay-300">
+            <div class="plant-img-wrapper">
+              <img src="images/pothos.jpg" alt="Golden Pothos with trailing vines on a wooden shelf" class="plant-img" loading="lazy">
+              <span class="plant-difficulty diff-easy">Easy Care</span>
+            </div>
+            <div class="plant-details">
+              <h3 class="plant-name">Golden Pothos</h3>
+              <p class="plant-scientific">Epipremnum Aureum</p>
+              <div class="plant-needs">
+                <span class="need"><span class="need-icon">☀️</span> Medium to Low</span>
+                <span class="need"><span class="need-icon">💧</span> 1-2 Weeks</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="testimonials" id="testimonials">
+      <div class="container">
+        <div class="section-header scroll-reveal">
+          <span class="section-tag">User Stories</span>
+          <h2 class="section-title">What plant parents are saying</h2>
+          <p class="section-subtitle">We have helped thousands of users save their dying green friends and enjoy stress-free watering routines.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          
+          <div class="testimonial-card scroll-reveal">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">"Before Bloom, my apartment was a plant graveyard. I was either letting them dry out completely or drowning them out of guilt. The smart reminders are perfectly timed. My plants look absolutely amazing now!"</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar">🌿</div>
+              <div class="reviewer-info">
+                <h4 class="reviewer-name">Sarah Jenkins</h4>
+                <span class="reviewer-tag">Saved 8 houseplants</span>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="testimonial-card scroll-reveal delay-150">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">"The AI disease diagnosis scanner was worth the download alone. My Fiddle Leaf Fig developed weird brown spots, and the diagnostic tool correctly identified bacterial blight. The action steps saved my tree."</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar">🌵</div>
+              <div class="reviewer-info">
+                <h4 class="reviewer-name">Marcus Thompson</h4>
+                <span class="reviewer-tag">Home gardener</span>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="testimonial-card scroll-reveal delay-300">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">"The interface feels incredibly clean, fresh, and modern. Spacing is beautiful and organizing my collection into rooms helps me tackle my chores block-by-block. Highly recommended companion app."</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar">🍃</div>
+              <div class="reviewer-info">
+                <h4 class="reviewer-name">Elena Rostova</h4>
+                <span class="reviewer-tag">Plant collector (34 plants)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="faq" id="faq">
+      <div class="container faq-container">
+        <div class="section-header scroll-reveal">
+          <span class="section-tag">Common Questions</span>
+          <h2 class="section-title">Got questions? We've got answers</h2>
+          <p class="section-subtitle">Everything you need to know about the Bloom mobile app, subscriptions, and integrations.</p>
+        </div>
+
+        <div class="faq-list scroll-reveal delay-150">
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>How does Bloom determine when to water my plants?</span>
+              <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-content" aria-hidden="true">
+              <p>Bloom generates customized guidelines by evaluating the specific plant species alongside your input parameters: pot material/size, soil type, and sunlight exposure. We also cross-reference current local weather forecasts to adjust schedules in real-time during hot summer waves or colder winter months.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Do I need to buy sensors or extra hardware?</span>
+              <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-content" aria-hidden="true">
+              <p>No extra hardware is required! Bloom runs its calculations using sophisticated meteorological models and environmental data inputs you provide. However, we do support integrations with popular soil moisture sensors if you prefer physical probe inputs.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Is the plant database updated regularly?</span>
+              <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-content" aria-hidden="true">
+              <p>Yes. Our botanical database is updated weekly in collaboration with university horticulture departments, ensuring accurate classification profiles and troubleshooting resources for over 15,000 indoor and outdoor species.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Can I share my plant collection with a pet-sitter?</span>
+              <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-content" aria-hidden="true">
+              <p>Absolutely! The 'Garden Co-Pilot' feature lets you export temporary or permanent access links. Your plant sitter can check schedules, view guide notes, and mark tasks complete without needing to create a paid account.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Is there a free version available?</span>
+              <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-content" aria-hidden="true">
+              <p>Yes. Bloom's free tier allows you to log up to 4 plants and receive basic watering reminders. Upgrading to Bloom Premium unlocks unlimited plants, AI disease diagnosis, weather sync, and custom growth journals.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="download" id="download">
+      <div class="container">
+        <div class="download-card scroll-reveal">
+          
+          <div class="cta-blob cta-blob-1"></div>
+          <div class="cta-blob cta-blob-2"></div>
+          
+          <div class="download-content">
+            <h2 class="download-title">Start growing healthier plants today</h2>
+             <div class="download-badges">
+              <a href="#" class="app-badge" aria-label="Download Bloom on the App Store">
+                <svg class="badge-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 4.17c.66-.81 1.11-1.93.99-3.06-1 .04-2.2.67-2.92 1.49-.62.71-1.16 1.85-1.01 2.96 1.12.09 2.27-.58 2.94-1.39z"/>
+                </svg>
+                <div class="badge-text">
+                  <span class="badge-subtitle">Download on the</span>
+                  <span class="badge-title">App Store</span>
+                </div>
+              </a>
+              <a href="#" class="app-badge" aria-label="Download Bloom on the Google Play Store">
+                <svg class="badge-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M5.25 3c-.33 0-.66.08-.94.24-.58.34-1 .99-1 1.72v14.08c0 .73.42 1.38 1 1.72.28.16.61.24.94.24.32 0 .64-.08.92-.24l12.16-7.04c1.16-.67 1.16-2.34 0-3.01L6.17 3.24c-.28-.16-.6-.24-.92-.24z"/>
+                </svg>
+                <div class="badge-text">
+                  <span class="badge-subtitle">GET IT ON</span>
+                  <span class="badge-title">Google Play</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#hero" class="logo">
+          <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22C12 22 20 18 20 12C20 9.8 19 8.5 17.5 7.5C15 6 12 2 12 2C12 2 9 6 6.5 7.5C5 8.5 4 9.8 4 12C4 18 12 22 12 22Z"></path>
+          </svg>
+          <span class="logo-text">Bloom</span>
+        </a>
+        <p class="footer-tagline">Nurturing your home garden through modern botanical science and design simplicity.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </a>
+          <a href="#" aria-label="Pinterest">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 22a9 9 0 0 1-1.91-8.3C6.73 9.4 10.15 6 14.3 6c4.6 0 8.3 3.8 8.3 8.5a8.27 8.27 0 0 1-4.85 7.6 3.59 3.59 0 0 1-3.66-.46c-1-.77-1.36-2-1.36-3 0-1.74 1.25-3.32 1.25-5.24 0-2.3-1.62-3.8-3.78-3.8-2.6 0-4.63 2.1-4.63 5 0 .9.3 1.8.8 2.5a.77.77 0 0 1-.06.85c-.32.48-.94.7-1.42.34A5.82 5.82 0 0 2 8.3 7 5.82 5.82 0 0 2 14.12 7c3.46 0 6.18 2.64 6.18 6.13 0 3-1.57 5.87-4.18 5.87A1.56 1.56 0 0 1 14.8 18l.84-3.42c.42-1.7.53-3.23-.27-4.47C14.47 8.7 13 8 11.5 8c-2.4 0-4.18 2.2-4.18 5.17a5.55 5.55 0 0 0 1 3.1.66.66 0 0 1 0 .73l-.68 2.73z"></path></svg>
+          </a>
+        </div>
+      </div>
+      
+      <div class="footer-links-group">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#app-preview">Screenshots</a></li>
+          <li><a href="#download">Download</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-group">
+        <h4>Community</h4>
+        <ul>
+          <li><a href="#gallery">Plant Directory</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#">Garden Blog</a></li>
+          <li><a href="#">Forum</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-group">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Bloom App Inc. All rights reserved. Made with love for green environments.</p>
+    </div>
+  </footer>
+
+  
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  
+  <script src="script.js"></script>
+</body>
+</html>
+
